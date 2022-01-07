@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors-->
+    <color name="black">#000000</color>
+    <color name="gray">#AFAFAF</color>
+    <color name="white">#f6f6f6</color>
+    <color name="transparent">#00000000</color>
+    <color name="day_night_сolor">#000</color>
+
+    <!-- Background colors -->
+    <color name="light_background">#181818</color>
+    <color name="background">#0D0D0D</color>
+    <color name="dark_background">#000000</color>
+
+    <!-- Main colors -->
+    <color name="primary_red">#e63e39</color>
+
+    <!-- Elements colors-->
+    <color name="text_color">@color/white</color>
+    <color name="text_color_hint">#D8D8D8</color>
+    <color name="focusableColor">#FF5554</color>
+    <color name="unselected_film">#00000000</color>
+    <color name="unselected_title">@color/white</color>
+    <color name="unselected_subtitle">@color/gray</color>
+    <color name="unselected_btn_color">@color/primary_red</color>
+    <color name="editor_input">#303030</color>
+
+    <!-- Film types colors -->
+    <color name="film">#00a0b0</color>
+    <color name="multfilm">#216d2b</color>
+    <color name="serial">#df565a</color>
+    <color name="anime">#696969</color>
+    <color name="tv_show">#909215</color>
+
+    <!-- Comments colors-->
+    <color name="active_like">#1CAE09</color>
+
+    <!-- TV Player colors-->
+    <color name="lb_control_button_color">#C8EEEEEE</color>
+
+    <!-- Voice Dialog Colors -->
+    <color name="blue_light">@color/primary_red</color>
+    <color name="blue_dark">#FF403F</color>
+    <color name="blue_cyan">#FF5C5B</color>
+</resources>

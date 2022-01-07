@@ -1,0 +1,163 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:layout="@layout/custom_title_preference"
+        app:title="@string/account">
+
+        <Preference
+            android:icon="@drawable/ic_baseline_login_24"
+            android:key="@string/login_pref"
+            android:layout="@layout/custom_preference"
+            app:title="@string/login" />
+
+        <Preference
+            android:icon="@drawable/ic_baseline_register_24"
+            android:key="@string/register_pref"
+            android:layout="@layout/custom_preference"
+            app:title="@string/register" />
+
+        <Preference
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:key="@string/exit_pref"
+            android:layout="@layout/custom_preference"
+            app:title="@string/exit" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/custom_title_preference"
+        app:title="@string/cat_interface">
+        <ListPreference
+            app:defaultValue="0"
+            app:entries="@array/screens"
+            app:entryValues="@array/screensIds"
+            app:key="screens"
+            app:layout="@layout/custom_list_preference"
+            app:title="@string/cat_main_screen"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="1"
+            app:entries="@array/sorts"
+            app:entryValues="@array/sortsIds"
+            app:key="defaultSort"
+            app:layout="@layout/custom_list_preference"
+            app:title="@string/newest_films_sort_default"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:defaultValue="7"
+            app:entries="@array/filmsInRow"
+            app:entryValues="@array/filmsInRow"
+            app:key="filmsInRow"
+            app:layout="@layout/custom_list_preference"
+            app:title="@string/films_row_title"
+            app:useSimpleSummaryProvider="true" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/custom_title_preference"
+        app:title="@string/player">
+
+        <SwitchPreferenceCompat
+            android:layout="@layout/custom_switch_preference"
+            android:defaultValue="true"
+            app:key="autoPlayNextEpisode"
+            app:summary="@string/next_episode_hint"
+            app:title="@string/next_episode_title" />
+
+        <SwitchPreferenceCompat
+            android:layout="@layout/custom_switch_preference"
+            app:key="isMaxQuality"
+            app:summary="@string/ismaxq_hint"
+            app:title="@string/ismaxq_title" />
+
+        <ListPreference
+            android:defaultValue="Авто"
+            app:entries="@array/stream_qualities"
+            app:entryValues="@array/stream_qualities"
+            app:key="defaultQuality"
+            app:layout="@layout/custom_list_preference"
+            app:title="@string/defaultq_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            android:layout="@layout/custom_switch_preference"
+            android:defaultValue="true"
+            app:key="isSelectSubtitles"
+            app:summary="@string/select_subtitles_hint"
+            app:title="@string/select_subtitles_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/custom_title_preference"
+        app:title="@string/player_title">
+
+        <SwitchPreferenceCompat
+            android:layout="@layout/custom_switch_preference"
+            app:key="isPlayer"
+            app:summary="@string/isplayer_hint"
+            app:title="Использовать стороний плеер" />
+
+        <SwitchPreferenceCompat
+            android:layout="@layout/custom_switch_preference"
+            app:key="isPlayerChooser"
+            app:summary="@string/player_chooser_hint"
+            app:title="@string/player_chooser_title" />
+
+        <SwitchPreferenceCompat
+            android:layout="@layout/custom_switch_preference"
+            android:defaultValue="true"
+            app:key="isSubtitlesDownload"
+            app:summary="@string/subtitle_download_hint"
+            app:title="@string/subtitle_download_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/custom_title_preference"
+        app:title="@string/cat_app">
+        <EditTextPreference
+            app:key="ownProvider"
+            app:layout="@layout/custom_edit_preference"
+            app:summary="@string/own_provider_hint"
+            app:title="@string/own_provider" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:layout="@layout/custom_switch_preference"
+            app:key="isCheckNewVersion"
+            app:summary="@string/new_version_pref_hint"
+            app:title="@string/new_version_pref_title" />
+
+        <SwitchPreferenceCompat
+            android:layout="@layout/custom_switch_preference"
+            app:key="isExternalDownload"
+            app:summary="@string/isExternalManager_hint"
+            app:title="@string/isExternalManager_title" />
+
+        <SwitchPreferenceCompat
+            android:layout="@layout/custom_switch_preference"
+            app:key="isAltLoading"
+            app:summary="@string/isAltLoading_hint"
+            app:title="@string/isAltLoading_title" />
+
+        <Preference
+            android:icon="@drawable/ic_baseline_mobile"
+            android:key="changeToMobile"
+            android:summary="@string/to_mobile"
+            android:layout="@layout/custom_preference"
+            app:title="@string/change_to_mobile" />
+
+    </PreferenceCategory>
+
+    <Preference
+        android:key="app_version"
+        android:layout="@layout/custom_text_preference"
+        app:title="@string/app_version" />
+
+</PreferenceScreen>

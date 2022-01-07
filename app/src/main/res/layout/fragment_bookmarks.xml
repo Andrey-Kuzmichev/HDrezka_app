@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.falcofemoralis.hdrezkaapp.views.fragments.BookmarksFragment">
+
+    <ProgressBar
+        android:id="@+id/fragment_bookmarks_pb_spinner_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/fragment_bookmarks_ll_spinners_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/fragment_bookmarks_sp_sort"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:spinnerMode="dialog"
+            app:smsp_arrowColor="@color/white"
+            app:smsp_floatingLabelColor="@color/white"
+            app:smsp_hint="@string/sort_hint"
+            app:smsp_hintColor="@color/white"
+            app:smsp_hintSize="@dimen/small_text"
+            app:smsp_itemColor="@color/white"
+            app:smsp_itemListColor="@color/text_color"
+            app:smsp_itemListHintColor="@color/white"
+            app:smsp_selectedItemListColor="@color/primary_red" />
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/fragment_bookmarks_sp_show"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:spinnerMode="dialog"
+            app:smsp_arrowColor="@color/white"
+            app:smsp_floatingLabelColor="@color/white"
+            app:smsp_hint="@string/show_hint"
+            app:smsp_hintColor="@color/white"
+            app:smsp_hintSize="@dimen/small_text"
+            app:smsp_itemColor="@color/white"
+            app:smsp_itemListColor="@color/text_color"
+            app:smsp_itemListHintColor="@color/white"
+            app:smsp_selectedItemListColor="@color/primary_red" />
+
+        <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+            android:id="@+id/fragment_bookmarks_sp_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:spinnerMode="dialog"
+            app:smsp_searchHintColor="@color/white"
+            app:smsp_searchFilterColor="@color/white"
+            app:smsp_searchTextColor="@color/white"
+            app:smsp_dismissSearchColor="@color/white"
+
+            app:smsp_arrowColor="@color/white"
+            app:smsp_enableSearchHeader="false"
+            app:smsp_floatingLabelColor="@color/white"
+            app:smsp_hint="@string/catalogue"
+            app:smsp_hintColor="@color/white"
+            app:smsp_hintSize="@dimen/small_text"
+            app:smsp_isSearchable="true"
+            app:smsp_itemColor="@color/white"
+            app:smsp_itemListBackgroundColor="@color/light_background"
+            app:smsp_itemListColor="@color/text_color"
+            app:smsp_itemListHintColor="@color/white"
+            app:smsp_searchBackgroundColor="@color/light_background"
+            app:smsp_selectedItemListColor="@color/primary_red" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fragment_bookmarks_tv_not_auth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/register_user_only"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text"
+        android:visibility="gone" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_bookmarks_fcv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

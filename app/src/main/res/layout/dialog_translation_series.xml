@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+        android:id="@+id/translations_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:smsp_arrowColor="@color/text_color"
+        app:smsp_floatingLabelColor="@color/text_color"
+        app:smsp_hint="@string/translation"
+        app:smsp_hintColor="@color/text_color"
+        app:smsp_hintSize="@dimen/small_text"
+        app:smsp_itemColor="@color/text_color"
+        app:smsp_itemListColor="@color/text_color"
+        app:smsp_itemListHintColor="@color/text_color"
+        app:smsp_selectedItemListColor="@color/primary_red" />
+
+    <ProgressBar
+        android:id="@+id/translations_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/translations_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

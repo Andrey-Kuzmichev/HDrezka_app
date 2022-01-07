@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/inflate_season_layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/inflate_season_layout_header"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.9"
+            android:padding="8dp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/normal_text" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.1"
+            android:gravity="center">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/triangle"
+                android:backgroundTint="@color/text_color" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.github.aakira.expandablelayout.ExpandableLinearLayout
+        android:id="@+id/inflate_season_layout_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:ael_duration="200"
+        app:ael_expanded="true">
+
+    </com.github.aakira.expandablelayout.ExpandableLinearLayout>
+</LinearLayout>

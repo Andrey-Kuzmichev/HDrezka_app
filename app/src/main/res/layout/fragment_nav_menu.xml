@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/open_nav_CL"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/transparent"
+        android:padding="15dp">
+
+        <ru.nikartm.support.ImageBadgeView
+            android:id="@+id/notify_IB"
+            android:layout_width="@dimen/dimens_24dp"
+            android:layout_height="@dimen/dimens_24dp"
+            android:background="@color/transparent"
+            android:focusable="true"
+            android:nextFocusLeft="@id/notify_IB"
+            android:nextFocusUp="@id/notify_IB"
+            android:nextFocusDown="@id/newest_IB"
+            android:src="@drawable/ic_baseline_notifications_24"
+            android:tag="@string/series_update"
+            app:ibv_badgeColor="@color/transparent"
+            app:ibv_badgeLimitValue="false"
+            app:ibv_badgeTextColor="@color/white"
+            app:ibv_badgeTextSize="@dimen/small_text"
+            app:ibv_badgeTextStyle="bold"
+            app:ibv_badgeValue="10"
+            app:ibv_fixedBadgeRadius="6dp"
+            app:ibv_maxBadgeValue="99"
+            app:ibv_roundBadge="true"
+            app:ibv_showCounter="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/newest_IB"
+            android:layout_width="@dimen/dimens_24dp"
+            android:layout_height="@dimen/dimens_24dp"
+            android:layout_marginTop="@dimen/dimens_30dp"
+            android:background="@color/transparent"
+            android:focusable="true"
+            android:nextFocusLeft="@id/newest_IB"
+            android:nextFocusUp="@id/notify_IB"
+            android:nextFocusDown="@id/categories_IB"
+            android:tag="@string/newest"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notify_IB"
+            app:srcCompat="@drawable/ic_baseline_movie_24" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/categories_IB"
+            android:layout_width="@dimen/dimens_24dp"
+            android:layout_height="@dimen/dimens_24dp"
+            android:layout_marginTop="@dimen/dimens_30dp"
+            android:background="@color/transparent"
+            android:focusable="true"
+            android:nextFocusLeft="@id/categories_IB"
+            android:nextFocusUp="@id/newest_IB"
+            android:nextFocusDown="@id/search_IB"
+            android:tag="@string/categories"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newest_IB"
+            app:srcCompat="@drawable/ic_baseline_categories_24" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/search_IB"
+            android:layout_width="@dimen/dimens_24dp"
+            android:layout_height="@dimen/dimens_24dp"
+            android:layout_marginTop="@dimen/dimens_30dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/transparent"
+            android:focusable="true"
+            android:nextFocusLeft="@id/search_IB"
+            android:nextFocusUp="@id/categories_IB"
+            android:nextFocusDown="@id/bookmarks_IB"
+            android:tag="@string/search_for_movie"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categories_IB"
+            app:srcCompat="@drawable/ic_baseline_search_24" />
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/bookmarks_IB"
+            android:layout_width="@dimen/dimens_24dp"
+            android:layout_height="@dimen/dimens_24dp"
+            android:layout_marginTop="@dimen/dimens_30dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/transparent"
+            android:focusable="true"
+            android:nextFocusLeft="@id/bookmarks_IB"
+            android:nextFocusUp="@id/search_IB"
+            android:nextFocusDown="@id/later_IB"
+            android:tag="@string/bookmarks"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_IB"
+            app:srcCompat="@drawable/ic_baseline_bookmarks_24" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/later_IB"
+            android:layout_width="@dimen/dimens_24dp"
+            android:layout_height="@dimen/dimens_24dp"
+            android:layout_marginTop="@dimen/dimens_30dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/transparent"
+            android:focusable="true"
+            android:nextFocusLeft="@id/later_IB"
+            android:nextFocusUp="@id/bookmarks_IB"
+            android:nextFocusDown="@id/settings_IB"
+            android:tag="@string/watch_later"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bookmarks_IB"
+            app:srcCompat="@drawable/ic_baseline_watch_later_24" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/settings_IB"
+            android:layout_width="@dimen/dimens_24dp"
+            android:layout_height="@dimen/dimens_24dp"
+            android:layout_marginTop="@dimen/dimens_30dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/transparent"
+            android:focusable="true"
+            android:nextFocusLeft="@id/settings_IB"
+            android:nextFocusUp="@id/later_IB"
+            android:nextFocusDown="@id/settings_IB"
+            android:tag="@string/settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/later_IB"
+            app:srcCompat="@drawable/ic_baseline_settings_24" />
+
+
+        <TextView
+            android:id="@+id/notify_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_17dp"
+            android:fontFamily="monospace"
+            android:text="@string/series_update"
+            android:textColor="#CECCD5"
+            android:textSize="@dimen/normal_text"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/notify_IB"
+            app:layout_constraintStart_toEndOf="@id/notify_IB"
+            app:layout_constraintTop_toTopOf="@id/notify_IB" />
+
+        <TextView
+            android:id="@+id/newest_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_17dp"
+            android:fontFamily="monospace"
+            android:text="@string/newest"
+            android:textColor="#CECCD5"
+            android:textSize="@dimen/normal_text"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/newest_IB"
+            app:layout_constraintStart_toEndOf="@id/newest_IB"
+            app:layout_constraintTop_toTopOf="@id/newest_IB" />
+
+        <TextView
+            android:id="@+id/categories_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_17dp"
+            android:fontFamily="monospace"
+            android:text="@string/categories"
+            android:textColor="#CECCD5"
+            android:textSize="@dimen/normal_text"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/categories_IB"
+            app:layout_constraintStart_toEndOf="@id/categories_IB"
+            app:layout_constraintTop_toTopOf="@id/categories_IB" />
+
+        <TextView
+            android:id="@+id/search_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_17dp"
+            android:fontFamily="monospace"
+            android:text="@string/search_for_movie"
+            android:textColor="#CECCD5"
+            android:textSize="@dimen/normal_text"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/search_IB"
+            app:layout_constraintStart_toEndOf="@id/search_IB"
+            app:layout_constraintTop_toTopOf="@id/search_IB" />
+
+        <TextView
+            android:id="@+id/bookmarks_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_17dp"
+            android:fontFamily="monospace"
+            android:text="@string/bookmarks"
+            android:textColor="#CECCD5"
+            android:textSize="@dimen/normal_text"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/bookmarks_IB"
+            app:layout_constraintStart_toEndOf="@id/bookmarks_IB"
+            app:layout_constraintTop_toTopOf="@id/bookmarks_IB" />
+
+        <TextView
+            android:id="@+id/later_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_17dp"
+            android:fontFamily="monospace"
+            android:text="@string/watch_later"
+            android:textColor="#CECCD5"
+            android:textSize="@dimen/normal_text"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/later_IB"
+            app:layout_constraintStart_toEndOf="@id/later_IB"
+            app:layout_constraintTop_toTopOf="@id/later_IB" />
+
+        <TextView
+            android:id="@+id/settings_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_17dp"
+            android:fontFamily="monospace"
+            android:text="@string/settings"
+            android:textColor="#CECCD5"
+            android:textSize="@dimen/normal_text"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/settings_IB"
+            app:layout_constraintStart_toEndOf="@id/settings_IB"
+            app:layout_constraintTop_toTopOf="@id/settings_IB" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

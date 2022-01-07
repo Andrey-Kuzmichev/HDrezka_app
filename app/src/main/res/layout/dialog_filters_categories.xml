@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:id="@+id/filters_categories_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/filters_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/filters_categories_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/film_types_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/type_header"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/normal_text" />
+
+                    <com.falcofemoralis.hdrezkaapp.views.elements.RadioGridGroup
+                        android:columnCount="2"
+                        android:id="@+id/film_types"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/type_films"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:text="@string/films"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/normal_text" />
+
+                        <RadioButton
+                            android:id="@+id/type_serials"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:text="@string/serials"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/normal_text" />
+
+                        <RadioButton
+                            android:id="@+id/type_multfilms"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:text="@string/multfilms"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/normal_text" />
+
+                        <RadioButton
+                            android:id="@+id/type_anime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:text="@string/anime"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/normal_text" />
+                    </com.falcofemoralis.hdrezkaapp.views.elements.RadioGridGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/filters_categories_sp_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/sp_genres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:spinnerMode="dialog"
+                        app:smsp_searchHintColor="@color/white"
+                        app:smsp_searchFilterColor="@color/white"
+                        app:smsp_searchTextColor="@color/white"
+                        app:smsp_dismissSearchColor="@color/white"
+
+                        app:smsp_arrowColor="@color/white"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_floatingLabelColor="@color/white"
+                        app:smsp_hint="@string/choose_genre"
+                        app:smsp_hintColor="@color/white"
+                        app:smsp_hintSize="@dimen/small_text"
+                        app:smsp_isSearchable="true"
+                        app:smsp_itemColor="@color/white"
+                        app:smsp_itemListBackgroundColor="@color/light_background"
+                        app:smsp_itemListColor="@color/text_color"
+                        app:smsp_itemListHintColor="@color/white"
+                        app:smsp_searchBackgroundColor="@color/light_background"
+                        app:smsp_selectedItemListColor="@color/primary_red" />
+
+                    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+                        android:id="@+id/sp_years"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:spinnerMode="dialog"
+                        app:smsp_searchHintColor="@color/white"
+                        app:smsp_searchFilterColor="@color/white"
+                        app:smsp_searchTextColor="@color/white"
+                        app:smsp_dismissSearchColor="@color/white"
+
+                        app:smsp_arrowColor="@color/white"
+                        app:smsp_enableSearchHeader="false"
+                        app:smsp_floatingLabelColor="@color/white"
+                        app:smsp_hint="@string/choose_year_hint"
+                        app:smsp_hintColor="@color/white"
+                        app:smsp_hintSize="@dimen/small_text"
+                        app:smsp_isSearchable="true"
+                        app:smsp_itemColor="@color/white"
+                        app:smsp_itemListBackgroundColor="@color/light_background"
+                        app:smsp_itemListColor="@color/text_color"
+                        app:smsp_itemListHintColor="@color/white"
+                        app:smsp_searchBackgroundColor="@color/light_background"
+                        app:smsp_selectedItemListColor="@color/primary_red" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

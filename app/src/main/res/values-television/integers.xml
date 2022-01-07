@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="film_info_weight_left">35</integer>
+    <integer name="film_info_weight_right">65</integer>
+    <integer name="comment_avatar">15</integer>
+    <integer name="comment_main">85</integer>
+    <integer name="watch_later_left">10</integer>
+    <integer name="watch_later_right">90</integer>
+</resources>

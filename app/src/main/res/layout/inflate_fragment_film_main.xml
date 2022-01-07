@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/fragment_film_ll_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_film_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:breakStrategy="balanced"
+            android:text="Film title "
+            android:textColor="@color/primary_red"
+            android:textSize="@dimen/head_text" />
+
+        <TextView
+            android:id="@+id/fragment_film_tv_origtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:breakStrategy="balanced"
+            android:text="Film original title"
+            android:textColor="@color/primary_red"
+            android:textSize="@dimen/normal_text" />
+
+    </LinearLayout>
+
+    <!-- Genres -->
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/fragment_film_ll_genres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:divider="@drawable/divider"
+            android:orientation="horizontal"
+            android:showDividers="middle" />
+    </HorizontalScrollView>
+
+    <!-- Poster and main info -->
+    <LinearLayout
+        android:id="@+id/fragment_film_ll_main_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="@integer/film_info_weight_left"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/fragment_film_iv_poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="film poster"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground" />
+
+            <TextView
+                android:id="@+id/fragment_film_tv_trailer"
+                style="@style/app_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="@string/trailer" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="@integer/film_info_weight_right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fragment_film_tv_ratingIMDB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="IMDB Rating"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+
+            <TextView
+                android:id="@+id/fragment_film_tv_ratingKP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="KP Rating"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+
+            <TextView
+                android:id="@+id/fragment_film_tv_ratingWA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="WA Rating"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+
+            <TextView
+                android:id="@+id/fragment_film_tv_ratingHR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="HR Rating"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+
+
+            <TextView
+                android:id="@+id/fragment_film_tv_directors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="Directors"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+
+            <TextView
+                android:id="@+id/fragment_film_tv_releaseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Release date"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+
+            <TextView
+                android:id="@+id/fragment_film_tv_runtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Runtime"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+
+            <TextView
+                android:id="@+id/fragment_film_tv_countries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Countries"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+
+            <TextView
+                android:id="@+id/fragment_film_tv_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Type"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+
+            <!-- <LinearLayout
+                 android:weightSum="3"
+                 android:gravity="center"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <ImageView
+                     android:layout_weight="1"
+                     android:id="@+id/fragment_film_iv_bookmark"
+                     android:layout_width="0dp"
+                     android:layout_height="50dp"
+                     android:layout_margin="5dp"
+                     android:background="#00000000"
+                     android:clickable="true"
+                     android:contentDescription="bookmarks button"
+                     android:focusable="true"
+                     android:foreground="?attr/selectableItemBackground"
+                     android:nextFocusRight="@id/fragment_film_iv_share"
+                     android:nextFocusDown="@id/fragment_film_iv_poster"
+                     android:src="@drawable/ic_baseline_star_bookmark_24" />
+
+                 <ImageView
+                     android:layout_weight="1"
+                     android:id="@+id/fragment_film_tv_download"
+                     android:layout_width="0dp"
+                     android:layout_height="50dp"
+                     android:layout_margin="5dp"
+                     android:background="#00000000"
+                     android:clickable="true"
+                     android:contentDescription="bookmarks button"
+                     android:focusable="true"
+                     android:foreground="?attr/selectableItemBackground"
+                     android:nextFocusRight="@id/fragment_film_iv_share"
+                     android:nextFocusDown="@id/fragment_film_iv_poster"
+                     android:src="@drawable/ic_baseline_arrow_circle_down_24" />
+
+                 <ImageView
+                     android:layout_weight="1"
+                     android:id="@+id/fragment_film_iv_share"
+                     android:layout_width="0dp"
+                     android:layout_height="50dp"
+                     android:layout_margin="5dp"
+                     android:background="#00000000"
+                     android:clickable="true"
+                     android:contentDescription="share button"
+                     android:focusable="true"
+                     android:foreground="?attr/selectableItemBackground"
+                     android:nextFocusLeft="@id/fragment_film_iv_bookmark"
+                     android:nextFocusDown="@id/fragment_film_iv_poster"
+                     android:src="@drawable/ic_baseline_share_24" />
+
+             </LinearLayout>-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Plot -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/plot"
+            android:textColor="@color/white"
+            android:textSize="@dimen/head_text" />
+
+        <TextView
+            android:id="@+id/fragment_film_tv_plot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:justificationMode="inter_word"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text" />
+    </LinearLayout>
+
+    <!-- Action buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/fragment_film_btn_bookmark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="bookmarks button"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="#00000000"
+                android:contentDescription="bookmarks button"
+                android:src="@drawable/ic_baseline_star_bookmark_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/bookmarks"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_film_btn_download"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="#00000000"
+                android:contentDescription="bookmarks button"
+                android:src="@drawable/ic_baseline_arrow_circle_down_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/download_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_film_btn_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="#00000000"
+                android:contentDescription="share button"
+                android:src="@drawable/ic_baseline_share_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/share_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_text" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- Open in player -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/fragment_film_tv_open_player"
+            style="@style/app_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/start_watching" />
+    </LinearLayout>
+
+    <!-- Player -->
+    <LinearLayout
+        android:id="@+id/fragment_film_ll_player_container"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/fragment_film_pb_player_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <WebView
+            android:id="@+id/fragment_film_wv_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main colors -->
+    <color name="primary_red">#eb233c</color>
+
+    <!-- Elements colors-->
+    <color name="unselected_film">#65000000</color>
+    <color name="unselected_title">#959696</color>
+    <color name="unselected_subtitle">#6a6a6a</color>
+    <color name="unselected_btn_color">#303030</color>
+</resources>

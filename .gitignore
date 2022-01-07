@@ -1,0 +1,20 @@
+*.iml
+.gradle
+
+.externalNativeBuild
+.cxx
+
+# production
+/build
+/release
+
+# misc
+.DS_Store
+
+/local.properties
+local.properties
+
+/captures
+
+# editors
+.idea

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/film_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="@dimen/inflate_film_layout_top_margin"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/film_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/film_posterLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/film_poster"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="film poster"
+            android:foregroundGravity="center_horizontal">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/film_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:text="Type"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text" />
+
+        <TextView
+            android:id="@+id/film_sub_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/film_poster"
+            android:background="@color/transparent"
+            android:breakStrategy="balanced"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp"
+            android:text="SubInfo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/film_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:breakStrategy="balanced"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Title"
+        android:textColor="@color/unselected_title"
+        android:textSize="@dimen/small_text" />
+
+    <TextView
+        android:id="@+id/film_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:text="Info"
+        android:textColor="@color/unselected_subtitle"
+        android:textSize="@dimen/small_text" />
+
+</LinearLayout>

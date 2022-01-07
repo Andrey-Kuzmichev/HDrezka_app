@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="head_text">@dimen/_18ssp</dimen>
+    <dimen name="normal_text">@dimen/_12ssp</dimen>
+    <dimen name="small_text">@dimen/_10ssp</dimen>
+    <dimen name="spinner_text">@dimen/_10ssp</dimen>
+    <dimen name="pref_padding">36dp</dimen>
+    <dimen name="root_pref_space">10dp</dimen>
+    <dimen name="dimens_100dp">100dp</dimen>
+    <dimen name="dimens_17dp">17dp</dimen>
+    <dimen name="dimens_24dp">24dp</dimen>
+    <dimen name="dimens_30dp">30dp</dimen>
+    <dimen name="search_margin_top">0dp</dimen>
+    <dimen name="search_margin_top_clear">0dp</dimen>
+    <dimen name="tv_navigation_width">50dp</dimen>
+    <dimen name="lb_playback_other_rows_center_to_bottom">190dp</dimen>
+    <dimen name="default_image_card_width">224dp</dimen>
+    <dimen name="default_image_card_height">126dp</dimen>
+    <dimen name="leanback_margin">0dp</dimen>
+    <dimen name="scale_from">100%</dimen>
+    <dimen name="scale_to">110%</dimen>
+    <dimen name="inflate_film_layout_top_margin">5dp</dimen>
+    <dimen name="leanback_margin_filters">5dp</dimen>
+    <dimen name="search_margin">0dp</dimen>
+</resources>

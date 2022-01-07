@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.falcofemoralis.hdrezkaapp.views.fragments.FilmsListFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_films_list_nsv_films"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/leanback_margin"
+        android:layout_marginTop="@dimen/leanback_margin"
+        android:layout_marginEnd="@dimen/leanback_margin"
+        android:layout_marginBottom="@dimen/leanback_margin">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_films_list_rv_films"
+            android:name="com.falcofemoralis.onlinefilmstracker.fragments.FilmsListFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:context="com.falcofemoralis.hdrezkaapp.views.fragments.FilmsListFragment"
+            tools:listitem="@layout/inflate_film" />
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/fragment_films_list_pb_data_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

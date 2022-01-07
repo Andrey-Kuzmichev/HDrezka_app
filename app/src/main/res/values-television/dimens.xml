@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="head_text">@dimen/_14ssp</dimen>
+    <dimen name="normal_text">@dimen/_8ssp</dimen>
+    <dimen name="small_text">@dimen/_6ssp</dimen>
+    <dimen name="pref_padding">56dp</dimen>
+    <dimen name="search_margin_top">15dp</dimen>
+    <dimen name="search_margin_top_clear">7dp</dimen>
+    <dimen name="lb_playback_other_rows_center_to_bottom">190dp</dimen>
+    <dimen name="leanback_margin">15dp</dimen>
+    <dimen name="inflate_film_layout_top_margin">12dp</dimen>
+    <dimen name="leanback_margin_filters">15dp</dimen>
+    <dimen name="search_margin">15dp</dimen>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ru.nikartm.support.ImageBadgeView
+            android:id="@+id/activity_main_iv_notify_btn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_notifications_24"
+            app:ibv_badgeColor="@color/transparent"
+            app:ibv_badgeLimitValue="false"
+            app:ibv_badgeTextColor="@color/white"
+            app:ibv_badgeTextSize="@dimen/small_text"
+            app:ibv_badgeTextStyle="bold"
+            app:ibv_badgeValue="10"
+            app:ibv_fixedBadgeRadius="10dp"
+            app:ibv_maxBadgeValue="99"
+            app:ibv_roundBadge="true"
+            app:ibv_showCounter="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text"
+            android:textStyle="bold" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/activity_main_iv_user"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/no_avatar" />
+
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/activity_main_fcv_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

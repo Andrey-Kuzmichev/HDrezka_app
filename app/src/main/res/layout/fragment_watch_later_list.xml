@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/fragment_watch_later_nsv_films"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_watch_later_list_rv"
+                android:name="com.falcofemoralis.onlinefilmstracker.views.fragments.WatchLaterFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="LinearLayoutManager"
+                tools:context="com.falcofemoralis.hdrezkaapp.views.fragments.WatchLaterFragment"
+                tools:listitem="@layout/inflate_watch_later" />
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/fragment_watch_later_list_pb_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/fragment_watch_later_list_tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="msg"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorPrimary">@color/primary_red</item>
+        <item name="colorPrimaryDark">@color/dark_background</item>
+        <item name="colorAccent">@color/primary_red</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/dark_background</item>
+        <item name="colorControlHighlight">@color/focusableColor</item>
+        <item name="alertDialogTheme">@style/CustomAlertDialog</item>
+        <item name="materialAlertDialogTheme">@style/CustomMaterialAlertDialog</item>
+        <item name="android:editTextStyle">@style/editTextStyle</item>
+        <item name="editTextStyle">@style/editTextStyle</item>
+    </style>
+
+    <style name="editTextStyle" parent="@style/Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/primary_red</item>
+    </style>
+
+    <!-- Alert Dialog -->
+    <style name="CustomAlertDialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="colorControlHighlight">@color/focusableColor</item>
+        <item name="android:colorBackground">@color/light_background</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="textColorAlertDialogListItem">@color/white</item>
+        <item name="color">@color/primary_red</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Alert.Button.Positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Alert.Button.Neutral</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Alert.Button.Neutral</item>
+
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/primary_red</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- Used for the background -->
+      <!--  <item name="android:background">@color/light_background</item>-->
+    </style>
+
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/transparent</item>
+        <item name="rippleColor">@color/primary_red</item>
+        <item name="android:textColor">@color/primary_red</item>
+    </style>
+
+    <style name="Alert.Button.Neutral" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@color/transparent</item>
+        <item name="rippleColor">@color/primary_red</item>
+        <item name="android:textColor">@color/primary_red</item>
+    </style>
+
+    <!-- Material Alert Dialog -->
+    <style name="CustomMaterialAlertDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:background">@color/light_background</item>
+
+        <!-- Text Color for title and message -->
+        <item name="colorOnSurface">@color/white</item>
+
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/primary_red</item>
+
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="textColorAlertDialogListItem">@color/white</item>
+        <item name="android:colorAccent">@color/primary_red</item>
+    </style>
+
+    <style name="UserSettingElement">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:drawableTint">@color/white</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
+    <style name="ATVTheme" parent="Theme.Leanback">
+        <item name="colorPrimary">@color/primary_red</item>
+        <item name="colorPrimaryDark">@color/dark_background</item>
+        <item name="colorAccent">@color/primary_red</item>
+        <item name="background">@color/black</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="playbackProgressPrimaryColor">@color/primary_red</item>
+    </style>
+
+    <style name="CustomSwitch" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/primary_red</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#575757</item>
+    </style>
+
+    <!-- Theme used for styling video cards in the vertical grid view -->
+    <style name="VideoGridCardTheme" parent="Theme.Leanback">
+        <item name="imageCardViewStyle">@style/GridCardStyle</item>
+        <item name="imageCardViewImageStyle">@style/VideoGridCardImageStyle</item>
+    </style>
+
+    <style name="GridCardStyle" parent="Widget.Leanback.ImageCardViewStyle">
+        <item name="cardBackground">@null</item>
+    </style>
+
+    <style name="VideoGridCardImageStyle" parent="Widget.Leanback.ImageCardView.ImageStyle">
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">155dp</item>
+    </style>
+
+    <style name="DefaultCardTheme" parent="Theme.Leanback">
+        <item name="imageCardViewStyle">@style/DefaultCardStyle</item>
+        <item name="imageCardViewImageStyle">@style/DefaultCardImageStyle</item>
+    </style>
+
+    <style name="DefaultCardStyle" parent="Widget.Leanback.ImageCardViewStyle">
+        <item name="cardBackground">@null</item>
+    </style>
+
+    <!-- A default card style. Used in cards example. -->
+    <style name="DefaultCardImageStyle" parent="Widget.Leanback.ImageCardView.ImageStyle">
+        <item name="android:layout_width">@dimen/default_image_card_width</item>
+        <item name="android:layout_height">@dimen/default_image_card_height</item>
+    </style>
+
+    <style name="app_button">
+        <item name="android:padding">7dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:background">@color/unselected_btn_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

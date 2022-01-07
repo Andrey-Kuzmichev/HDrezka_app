@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.falcofemoralis.hdrezkaapp.views.fragments.FilmFragment">
+
+    <ProgressBar
+        android:id="@+id/fragment_film_pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_film_sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Main info -->
+            <include layout="@layout/inflate_fragment_film_main" />
+
+            <!--Rating-->
+            <RelativeLayout
+                android:id="@+id/fragment_film_rating_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <com.willy.ratingbar.ScaleRatingBar
+                    android:id="@+id/fragment_film_srb_rating_hdrezka_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:elevation="10dp"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="true"
+                    app:srb_drawableEmpty="@drawable/ic_baseline_star_transparent_24"
+                    app:srb_drawableFilled="@drawable/ic_baseline_star_active_24"
+                    app:srb_isIndicator="false"
+                    app:srb_numStars="10"
+                    app:srb_scrollable="true"
+                    app:srb_starHeight="30dp"
+                    app:srb_starPadding="5dp"
+                    app:srb_starWidth="30dp"
+                    app:srb_stepSize="1" />
+
+                <com.willy.ratingbar.ScaleRatingBar
+                    android:id="@+id/fragment_film_srb_rating_hdrezka"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:elevation="5dp"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="false"
+                    app:srb_drawableEmpty="@drawable/ic_baseline_star_empty_24"
+                    app:srb_drawableFilled="@drawable/ic_baseline_star_24"
+                    app:srb_isIndicator="true"
+                    app:srb_minimumStars="1"
+                    app:srb_numStars="10"
+                    app:srb_scrollable="false"
+                    app:srb_starHeight="30dp"
+                    app:srb_starPadding="5dp"
+                    app:srb_starWidth="30dp"
+                    app:srb_stepSize="0.1" />
+
+            </RelativeLayout>
+
+            <!-- Actors -->
+            <LinearLayout
+                android:id="@+id/fragment_film_ll_actorsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/cast"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/head_text" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/fragment_film_ll_actorsLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/divider"
+                        android:orientation="horizontal"
+                        android:showDividers="middle" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- Schedule -->
+            <LinearLayout
+                android:id="@+id/fragment_film_ll_schedule_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_film_tv_schedule_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/series_timetable"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/head_text" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_film_ll_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Collection -->
+            <LinearLayout
+                android:id="@+id/fragment_film_ll_collection_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_film_tv_collection_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/collection"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/head_text" />
+
+                <LinearLayout
+                    android:id="@+id/fragment_film_tv_collection_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- Relative -->
+            <LinearLayout
+                android:id="@+id/fragment_film_ll_related_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_film_tv_related_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/related"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/head_text" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/fragment_film_tv_related_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- Comments -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/comments"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/head_text" />
+
+                <TextView
+                    android:id="@+id/fragment_film_view_comment_editor_opener"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_background"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:text="@string/new_comment_hint"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragment_film_rv_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/inflate_comment" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/fragment_film_pb_comments_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/fragment_film_ll_comment_editor_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/comment_editor_bg"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_newest"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_movie_24"
+        android:title="@string/newest" />
+
+    <item
+        android:id="@+id/nav_categories"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_categories_24"
+        android:title="@string/categories" />
+
+    <item
+        android:id="@+id/nav_search"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/search_for_movie" />
+
+    <item
+        android:id="@+id/nav_bookmarks"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_bookmarks_24"
+        android:title="@string/bookmarks" />
+
+    <item
+        android:id="@+id/nav_watch"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_watch_later_24"
+        android:title="@string/watch_later" />
+
+</menu>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:focusable="true"
+    android:id="@+id/actor_layout_container"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/actor_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/leanback_margin"
+        android:layout_marginBottom="@dimen/leanback_margin"
+        android:id="@+id/actor_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/actor_photo"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:contentDescription="actor photo"
+            android:src="@drawable/nopersonphoto" />
+
+        <TextView
+            android:text="Без имени"
+            android:id="@+id/actor_name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:breakStrategy="balanced"
+            android:gravity="center"
+            android:textColor="@color/unselected_title"
+            android:textSize="@dimen/small_text" />
+
+        <TextView
+            android:id="@+id/actor_career"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:breakStrategy="balanced"
+            android:gravity="center"
+            android:textColor="@color/unselected_subtitle"
+            android:textSize="@dimen/small_text" />
+    </LinearLayout>
+</LinearLayout>

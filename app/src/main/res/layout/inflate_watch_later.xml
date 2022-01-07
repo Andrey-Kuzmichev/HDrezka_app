@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/watchLater_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:id="@+id/inflate_watch_poster_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/watch_later_left"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/inflate_watch_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:contentDescription="user avatar"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/inflate_watch_poster_loading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/watch_later_right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/watchLater_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Игра престолов (2011-2019, проект завершен)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/watchLater_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Дата: 06-07-2021"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/watchLater_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="1 сезон 1 серия (HDrezka Studio) смотреть ещё 9 серий в 1 сезоне"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/watchLater_delete"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="x"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/light_background" />
+
+</LinearLayout>

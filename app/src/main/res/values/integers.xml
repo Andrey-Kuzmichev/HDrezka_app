@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="animation_duration">200</integer>
+    <integer name="film_info_weight_left">40</integer>
+    <integer name="film_info_weight_right">60</integer>
+    <integer name="comment_avatar">20</integer>
+    <integer name="comment_main">80</integer>
+    <integer name="watch_later_left">20</integer>
+    <integer name="watch_later_right">80</integer>
+</resources>

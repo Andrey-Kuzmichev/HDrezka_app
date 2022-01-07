@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/filters_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/film_sort_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sort_header"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/normal_text" />
+
+                <com.falcofemoralis.hdrezkaapp.views.elements.RadioGridGroup
+                    android:id="@+id/film_sort"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:columnCount="2"
+                    android:useDefaultMargins="true">
+
+                    <RadioButton
+                        android:id="@+id/sort_new"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/new_films"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text"
+                        android:layout_columnWeight="1" />
+
+                    <RadioButton
+                        android:id="@+id/sort_last"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/last"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text"
+                        android:layout_columnWeight="1" />
+
+                    <RadioButton
+                        android:id="@+id/sort_popular"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/popular"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text"
+                        android:layout_columnWeight="1" />
+
+                    <RadioButton
+                        android:id="@+id/sort_announce"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/announce"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text"
+                        android:layout_columnWeight="1" />
+
+                    <RadioButton
+                        android:id="@+id/sort_now"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/now"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text"
+                        android:layout_columnWeight="1" />
+
+                </com.falcofemoralis.hdrezkaapp.views.elements.RadioGridGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/film_types_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_header"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/normal_text" />
+
+                <com.falcofemoralis.hdrezkaapp.views.elements.RadioGridGroup
+                    android:columnCount="2"
+                    android:id="@+id/film_types"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/type_all"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:checked="true"
+                        android:text="@string/all"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text" />
+
+                    <RadioButton
+                        android:id="@+id/type_films"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:text="@string/films"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text" />
+
+                    <RadioButton
+                        android:id="@+id/type_serials"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:text="@string/serials"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text" />
+
+                    <RadioButton
+                        android:id="@+id/type_multfilms"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:text="@string/multfilms"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text" />
+
+                    <RadioButton
+                        android:id="@+id/type_anime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"
+                        android:text="@string/anime"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/normal_text" />
+                </com.falcofemoralis.hdrezkaapp.views.elements.RadioGridGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

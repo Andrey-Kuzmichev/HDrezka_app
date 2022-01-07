@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_search_ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.falcofemoralis.hdrezkaapp.views.fragments.SearchFragment">
+
+    <FrameLayout
+        android:layout_marginStart="@dimen/search_margin"
+        android:layout_marginEnd="@dimen/search_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/fragment_search_act_suggest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/search_margin_top"
+            android:background="@color/unselected_btn_color"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:drawableTint="@color/white"
+            android:focusable="true"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionNext"
+            android:nextFocusRight="@id/fragment_search_tv_clear"
+            android:padding="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="80dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <ImageView
+            android:nextFocusLeft="@id/fragment_search_act_suggest"
+            android:nextFocusRight="@id/fragment_search_voice"
+            android:id="@+id/fragment_search_tv_clear"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|end"
+            android:layout_marginTop="@dimen/search_margin_top_clear"
+            android:layout_marginEnd="50dp"
+            app:srcCompat="@drawable/ic_baseline_close_24"
+            android:focusable="true"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/fragment_search_voice"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center|end"
+            android:layout_marginTop="@dimen/search_margin_top_clear"
+            android:layout_marginEnd="10dp"
+            android:focusable="true"
+            android:nextFocusLeft="@id/fragment_search_tv_clear"
+            app:srcCompat="@drawable/ic_baseline_mic_none_24" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_search_ll_hint"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:text="@string/search_page_hint"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text" />
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_search_fcv_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

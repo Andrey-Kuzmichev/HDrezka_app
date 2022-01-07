@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="@integer/animation_duration"
+    android:fromXScale="@dimen/scale_to"
+    android:fromYScale="@dimen/scale_to"
+    android:toXScale="@dimen/scale_from"
+    android:toYScale="@dimen/scale_from"
+    android:pivotX="50%"
+    android:pivotY="50%">
+</scale>

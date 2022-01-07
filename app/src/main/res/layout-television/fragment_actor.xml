@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_actor_films_ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".views.fragments.ActorFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/fragment_actor_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_actor_films_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:breakStrategy="balanced"
+                    android:text="Name"
+                    android:textColor="@color/primary_red"
+                    android:textSize="@dimen/head_text" />
+
+                <TextView
+                    android:id="@+id/fragment_actor_films_tv_name_orig"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:breakStrategy="balanced"
+                    android:text="Orig name"
+                    android:textColor="@color/primary_red"
+                    android:textSize="@dimen/normal_text" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:id="@+id/fragment_actor_films_iv_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="25"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:adjustViewBounds="true" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="75"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fragment_actor_films_tv_career"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Career"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/normal_text" />
+
+                    <TextView
+                        android:id="@+id/fragment_actor_films_tv_borndate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Borndate"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/normal_text" />
+
+                    <TextView
+                        android:id="@+id/fragment_actor_films_tv_bornplace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bornplace"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/normal_text" />
+
+                    <TextView
+                        android:id="@+id/fragment_actor_films_tv_dieddate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deathdate"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/normal_text" />
+
+                    <TextView
+                        android:id="@+id/fragment_actor_films_tv_diedplace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deathplace"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/normal_text" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:id="@+id/fragment_actor_ll_films"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:orientation="vertical"
+                android:visibility="visible" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/fragment_actor_pb_data_loading"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <view
+                android:id="@+id/comment_editor_et_new_comment"
+                class="com.falcofemoralis.hdrezkaapp.views.elements.CommentEditor$CommentEditorEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/post_comment_hint"
+                android:paddingStart="20dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="48dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/normal_text" />
+
+            <ImageView
+                android:id="@+id/comment_editor_iv_add"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_baseline_send_24" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="15dp"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/comment_editor_iv_tag_b"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_comment_b" />
+
+            <ImageView
+                android:id="@+id/comment_editor_iv_tag_i"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_comment_i" />
+
+            <ImageView
+                android:id="@+id/comment_editor_iv_tag_u"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_comment_u" />
+
+            <ImageView
+                android:id="@+id/comment_editor_iv_tag_s"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_comment_s" />
+
+            <ImageView
+                android:id="@+id/comment_editor_iv_tag_spoiler"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_comment_spoiler" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

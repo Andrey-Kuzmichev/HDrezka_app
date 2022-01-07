@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/inflate_collection_item_n"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_weight="0.4"
+        android:text="10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:id="@+id/inflate_collection_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_weight="2"
+        android:text="Терминатор: Тёмные судьбы"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/inflate_collection_item_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.9"
+        android:padding="5dp"
+        android:text="2019 год"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/inflate_collection_item_rating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_weight="0.7"
+        android:text="5.74"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_text" />
+</LinearLayout>

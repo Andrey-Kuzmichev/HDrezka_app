@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/watchLater_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusRight="@id/watchLater_delete"
+            android:focusable="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/inflate_watch_poster_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/inflate_watch_poster"
+                    android:layout_width="wrap_content"
+                    android:layout_height="160dp"
+                    android:contentDescription="user avatar"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/inflate_watch_poster_loading"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/watchLater_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Игра престолов (2011-2019, проект завершен)"
+                    android:textColor="@color/unselected_title"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/watchLater_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Дата: 06-07-2021"
+                    android:textColor="@color/unselected_subtitle"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/watchLater_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="1 сезон 1 серия (HDrezka Studio) смотреть ещё 9 серий в 1 сезоне"
+                    android:textColor="@color/unselected_subtitle"
+                    android:textSize="@dimen/normal_text" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/watchLater_delete"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="x"
+            android:nextFocusLeft="@id/watchLater_layout"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_text" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/light_background" />
+
+</LinearLayout>

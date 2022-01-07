@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="countries">
+        <item>Австралия</item>
+        <item>Австрия</item>
+        <item>Аргентина</item>
+        <item>Бельгия</item>
+        <item>Бразилия</item>
+        <item>Болгария</item>
+        <item>Великобритания</item>
+        <item>Германия</item>
+        <item>Гонконг</item>
+        <item>Дания</item>
+        <item>Индия</item>
+        <item>Испания</item>
+        <item>Италия</item>
+        <item>Канада</item>
+        <item>Китай</item>
+        <item>Корея Южная</item>
+        <item>Мексика</item>
+        <item>Нидерланды</item>
+        <item>Новая Зеландия</item>
+        <item>Норвегия</item>
+        <item>Польша</item>
+        <item>Россия</item>
+        <item>СССР</item>
+        <item>США</item>
+        <item>Таиланд</item>
+        <item>Тайвань</item>
+        <item>Турция</item>
+        <item>Украина</item>
+        <item>Филиппины</item>
+        <item>Франция</item>
+        <item>Чехия</item>
+        <item>Швейцария</item>
+        <item>Швеция</item>
+        <item>ЮАР</item>
+        <item>Япония</item>
+    </string-array>
+    <string-array name="genres">
+        <item>Фантастика</item>
+        <item>Триллеры</item>
+        <item>Комедии</item>
+        <item>Фэнтези</item>
+        <item>Боевики</item>
+        <item>Детективы</item>
+        <item>Ужасы</item>
+        <item>Драмы</item>
+        <item>Приключения</item>
+        <item>Семейные</item>
+        <item>Мелодрамы</item>
+        <item>Спортивные</item>
+        <item>Криминал</item>
+        <item>Исторические</item>
+        <item>Биографические</item>
+        <item>Вестерны</item>
+        <item>Документальные</item>
+        <item>Музыкальные</item>
+        <item>Эротика</item>
+        <item>Зарубежные</item>
+        <item>Сказки</item>
+        <item>Детские</item>
+        <item>Романтические</item>
+        <item>Арт-хаус</item>
+    </string-array>
+    <array name="initial_rating_slider_values">
+        <item>0.0</item>
+        <item>10.0</item>
+    </array>
+    <string-array name="sort">
+        <item>По дате добавления</item>
+        <item>По году выпуска</item>
+        <item>Популярные</item>
+    </string-array>
+    <string-array name="show">
+        <item>Все</item>
+        <item>Фильмы</item>
+        <item>Сериалы</item>
+        <item>Мультфильмы</item>
+        <item>Аниме</item>
+    </string-array>
+    <string-array name="providerProtocols">
+        <item>http://</item>
+        <item>https://</item>
+    </string-array>
+    <string-array name="screens">
+        <item>@string/newest</item>
+        <item>@string/categories</item>
+        <item>@string/search_for_movie</item>
+        <item>@string/bookmarks</item>
+        <item>@string/watch_later</item>
+    </string-array>
+    <string-array name="screensIds">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="filmsInRow">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="stream_qualities">
+        <item>Авто</item>
+        <item>360p</item>
+        <item>480p</item>
+        <item>720p</item>
+        <item>1080p</item>
+        <item>1080p Ultra</item>
+    </string-array>
+    <string-array name="sorts">
+        <item>@string/new_films</item>
+        <item>@string/last</item>
+        <item>@string/popular</item>
+        <item>@string/announce</item>
+        <item>@string/now</item>
+    </string-array>
+    <string-array name="sortsIds">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+</resources>
